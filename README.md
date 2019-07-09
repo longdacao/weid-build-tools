@@ -13,10 +13,19 @@ WeIdentity JAVA SDK安装部署文档（weid-build-tools方式）
 
 在 `build.gradle` 文件中中添加相关的包依赖：
 
-    dependencies {
-        compile 'com.webank:weid-java-sdk:1.3.0'
-    }
+```
+List weid = [
+    "com.webank:weid-java-sdk:1.3.0"
+]
 
+dependencies {
+    if (gradle.startParameter.isOffline()) {
+        compile fileTree(dir: 'dist/lib', include: '*.jar')
+    } else {
+        compile lombok, apache_commons, jackson, weid, jcommander
+    }
+}
+``` 
 * * * * *
 
 <div id="section-2">
