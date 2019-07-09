@@ -52,13 +52,13 @@ dependencies {
 channelport(需要参考区块链节点的`config.json` 配置文件)，示例如下：
 
 ``` {.sourceCode .shell}
-blockchain.node.address=10.10.10.10:33034
+blockchain_address=10.10.10.10:33034
 ```
 
 如果需要配置多个区块链节点，用逗号分隔，示例如下：
 
 ``` {.sourceCode .shell}
-blockchain.node.address=10.10.10.10:33034,10.10.10.11:33034
+blockchain_address=10.10.10.10:33034,10.10.10.11:33034
 ```
 
 配置完区块链节点信息后，您还需要配置FISCO BCOS版本信息：
